@@ -56,14 +56,14 @@ upload_proxy() {
     zip --password $PASS proxy.zip proxy.txt
     URL=$(curl -s --upload-file proxy.zip https://bashupload.com/proxy.zip)
 
-    echo "Proxy is ready! Format IP:PORT"
+    echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
     echo "Download zip archive from: ${URL}"
     echo "Password: ${PASS}"
 
 }
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "$IP4/$port/$(gen64 $IP6)"
+        echo "usr$(random)/pass$(random)/$IP4/$port/$(gen64 $IP6)"
     done
 }
 
@@ -93,7 +93,7 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
-echo "Bạn muốn tạo bao nhiêu proxy? Ví dụ 500"
+echo "How many proxy do you want to create? Example 500"
 read COUNT
 
 FIRST_PORT=32000
