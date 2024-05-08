@@ -36,7 +36,7 @@ setuid 65535
 flush
 auth strong
 
-users $(awk -F "/" 'BEGIN{ORS="";} {print $1 ":CL:" $2 " "}' ${WORKDATA})
+users
 
 $(awk -F "/" '{print "auth strong\n" \
 "allow " $1 "\n" \
@@ -63,7 +63,7 @@ upload_proxy() {
 }
 gen_data() {
     seq $FIRST_PORT $LAST_PORT | while read port; do
-        echo "usr$(random)/pass$(random)/$IP4/$port/$(gen64 $IP6)"
+        echo "$IP4/$port/$(gen64 $IP6)"
     done
 }
 
