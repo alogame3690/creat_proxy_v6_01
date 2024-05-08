@@ -5,6 +5,7 @@ Chú ý: Các trang web không phân giải được ipv6 sẽ không truy cập
 
 # Yêu cầu
 Centos 7
+
 Ipv6 \64
 
 # Các bước cài đặt
