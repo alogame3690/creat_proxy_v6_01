@@ -9,6 +9,6 @@ Ipv6 \64
 Bước 1 : Có thể update centos dùng cho mượt hoặc không :
 yum update -y
 
-Bước 2. Chạy lệnh trên CentOS: bash <(curl -s "https://raw.githubusercontent.com/ngochoaitn/multi_proxy_ipv6/main/install.sh")
+Bước 2. Chạy lệnh trên CentOS: bash <(curl -s "https://raw.githubusercontent.com/alogame3690/creat_proxy_v6_01/main/install.sh")
 
 Bước 3: Tải file proxy.zip, cấu trúc proxy: IP4:PORT:LOGIN:PASS
